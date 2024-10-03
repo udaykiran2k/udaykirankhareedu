@@ -1,33 +1,91 @@
-/* Global styles */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #000;
+    color: #fff;
     margin: 0;
     padding: 0;
-  }
-  
-  /* Heading styles */
-  h1 {
-    color: #007acc;
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  /* Paragraph styles */
-  p {
-    text-align: center;
-    font-size: 18px;
-  }
-  
-  /* Footer styles */
-  footer {
-    text-align: center;
+}
+
+a {
+    color: #00acee;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
     background-color: #333;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
-  
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #1a1a1a;
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 0 10px;
+    filter: invert(100%);
+}
+
+/* About Me Section */
+.about-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 20px;
+}
+
+.about-pic {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.about-text h2 {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-content a {
+    display: block;
+    margin: 5px 0;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
