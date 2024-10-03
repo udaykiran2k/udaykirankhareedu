@@ -37,7 +37,7 @@ a:hover {
 .hero {
     text-align: center;
     padding: 200px 20px;
-    background-color: #282c34;  /* New dark background color for Home section */
+    background-color: #282c34;
     margin-bottom: 0;
 }
 
@@ -46,8 +46,8 @@ a:hover {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    object-fit: cover;  /* Crop the image to maintain aspect ratio */
-    object-position: center; /* Ensure the image is centered while cropped */
+    object-fit: cover;
+    object-position: center;
 }
 
 .social-icons img {
@@ -62,10 +62,10 @@ a:hover {
     justify-content: center;
     align-items: center;
     padding: 200px 20px;
-    background-color: #1c1c1c;  /* Lighter background for separation */
+    background-color: #1c1c1c;
     margin-top: 0;
     margin-bottom: 0;
-    border-top: 2px solid #333; /* Optional border for separation */
+    border-top: 2px solid #333;
 }
 
 .about-content {
@@ -81,19 +81,18 @@ a:hover {
     text-align: left;
 }
 
-/* Keep About Me image as it is */
 .about-pic {
     max-width: 300px;
     width: 100%;
     height: auto;
     margin-right: 30px;
     border-radius: 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for a stylish look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Footer */
 footer {
-    background-color: #333;  /* Matches the top navigation bar */
+    background-color: #333;
     padding: 20px;
     text-align: center;
     color: #fff;
@@ -113,4 +112,42 @@ footer {
 footer p {
     margin-top: 20px;
     font-size: 0.8em;
+}
+
+/* Responsive Design for Mobile Screens */
+@media only screen and (max-width: 768px) {
+    /* Stack the navigation links vertically */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Make the profile image smaller for mobile */
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Make the About section stack vertically */
+    .about-section {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    /* Adjust About Me image size for mobile */
+    .about-pic {
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+
+    /* Ensure text is centered on smaller screens */
+    .about-text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    /* Footer responsive layout */
+    .footer-content {
+        flex-direction: column;
+    }
 }
