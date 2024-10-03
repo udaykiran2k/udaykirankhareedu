@@ -1,0 +1,116 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #00acee;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.navbar-right a {
+    margin-left: 20px;
+    color: #fff;
+}
+
+/* Hero Section (Home) */
+.hero {
+    text-align: center;
+    padding: 200px 20px;
+    background-color: #282c34;  /* New dark background color for Home section */
+    margin-bottom: 0;
+}
+
+/* Circular image in Hero section */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;  /* Crop the image to maintain aspect ratio */
+    object-position: center; /* Ensure the image is centered while cropped */
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 0 10px;
+    filter: invert(100%);
+}
+
+/* About Me Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 20px;
+    background-color: #1c1c1c;  /* Lighter background for separation */
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top: 2px solid #333; /* Optional border for separation */
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    padding-left: 30px;
+    text-align: left;
+}
+
+/* Keep About Me image as it is */
+.about-pic {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin-right: 30px;
+    border-radius: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for a stylish look */
+}
+
+/* Footer */
+footer {
+    background-color: #333;  /* Matches the top navigation bar */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-content a {
+    display: block;
+    margin: 5px 0;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
