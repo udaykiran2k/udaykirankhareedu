@@ -33,16 +33,21 @@ a:hover {
     color: #fff;
 }
 
-/* Hero Section */
+/* Hero Section (Home) */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background-color: #1a1a1a;
+    padding: 200px 20px;
+    background-color: #282c34;  /* New dark background color for Home section */
+    margin-bottom: 0;
 }
 
+/* Circular image in Hero section */
 .profile-pic {
     width: 150px;
+    height: 150px;
     border-radius: 50%;
+    object-fit: cover;  /* Crop the image to maintain aspect ratio */
+    object-position: center; /* Ensure the image is centered while cropped */
 }
 
 .social-icons img {
@@ -54,25 +59,45 @@ a:hover {
 /* About Me Section */
 .about-section {
     display: flex;
-    justify-content: space-around;
-    padding: 100px 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 20px;
+    background-color: #1c1c1c;  /* Lighter background for separation */
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top: 2px solid #333; /* Optional border for separation */
 }
 
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    padding-left: 30px;
+    text-align: left;
+}
+
+/* Keep About Me image as it is */
 .about-pic {
-    width: 150px;
-    border-radius: 50%;
-}
-
-.about-text h2 {
-    margin-bottom: 20px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin-right: 30px;
+    border-radius: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for a stylish look */
 }
 
 /* Footer */
 footer {
-    background-color: #1a1a1a;
+    background-color: #333;  /* Matches the top navigation bar */
     padding: 20px;
     text-align: center;
     color: #fff;
+    margin: 0;
 }
 
 .footer-content {
