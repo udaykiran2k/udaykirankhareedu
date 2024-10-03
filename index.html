@@ -5,77 +5,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uday Kiran Khareedu - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Add particles.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-left">
-            <h1>Uday Kiran Khareedu</h1>
-        </div>
+    <div class="navbar">
+        <h1>Uday Kiran Khareedu</h1>
         <div class="navbar-right">
             <a href="#home">Home</a>
             <a href="#about">About Me</a>
-            <a href="resume.pdf" download>Resume</a>
-            <a href="#footer">Contact Me</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact Me</a>
         </div>
-    </nav>
+    </div>
+
+    <!-- Particles Background for Home Section -->
+    <div id="particles-js"></div>
 
     <!-- Hero Section (Home) -->
-    <section id="home" class="hero">
-        <img src="your-image.jpg" alt="Uday Kiran Khareedu" class="profile-pic">
-        <h1>Uday Kiran Khareedu</h1>
-        <p>Sr Azure Data Engineer/Developer, Marathon Petroleum Corporation</p>
+    <section class="hero" id="home">
+        <img src="your-image.jpg" alt="Profile Image" class="profile-pic">
+        <h2>Uday Kiran Khareedu</h2>
+        <p>Azure Developer, Marathon Petroleum Corporation</p>
         <div class="social-icons">
-            <a href="https://linkedin.com/in/udaykuk" target="_blank">
-                <img src="linkedin-icon.png" alt="LinkedIn">
-            </a>
-            <a href="https://github.com/udaykiran2k" target="_blank">
-                <img src="github-icon.png" alt="GitHub">
-            </a>
+            <a href="https://www.linkedin.com/"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="https://github.com/"><img src="github-icon.png" alt="GitHub"></a>
         </div>
     </section>
 
     <!-- About Me Section -->
-    <section id="about" class="about-section">
-        <div class="about-content">
-            <img src="your-image.jpg" alt="Uday Kiran Khareedu" class="about-pic">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>I am a senior Azure data engineer/Developer. With over 10 years of experience in the IT industry, I have developed a deep expertise in data engineering and cloud-based solutions, primarily focusing on the Azure ecosystem. I hold a certification as an Azure data engineer, demonstrating my proficiency and knowledge of the latest cloud technologies and best practices.</p>
-                <p>~Uday Kiran Khareedu</p>
+    <section class="about-section" id="about">
+        <h3 class="section-title">About Me</h3>
+        <p class="section-description">I'm a passionate Data Engineer working at Marathon Petroleum Corporation. Skilled in Azure, data pipelines, and cloud solutions...</p>
+        
+        <div class="hex-grid">
+            <!-- Hexagon 1 -->
+            <div class="hex">
+                <div class="hex-in">
+                    <div class="hex-img" style="background-image:url('your-image1.jpg');"></div>
+                </div>
+            </div>
+            <!-- Hexagon 2 -->
+            <div class="hex">
+                <div class="hex-in">
+                    <div class="hex-img" style="background-image:url('your-image2.jpg');"></div>
+                </div>
+            </div>
+            <!-- Hexagon 3 -->
+            <div class="hex">
+                <div class="hex-in">
+                    <div class="hex-img" style="background-image:url('your-image3.jpg');"></div>
+                </div>
+            </div>
+            <!-- Hexagon 4 -->
+            <div class="hex">
+                <div class="hex-in">
+                    <div class="hex-img" style="background-image:url('your-image4.jpg');"></div>
+                </div>
+            </div>
+            <!-- Hexagon 5 -->
+            <div class="hex">
+                <div class="hex-in">
+                    <div class="hex-img" style="background-image:url('your-image5.jpg');"></div>
+                </div>
             </div>
         </div>
     </section>
 
+
+
     <!-- Footer -->
-    <footer id="footer">
+    <footer>
         <div class="footer-content">
-            <div class="contact-info">
+            <div>
                 <h3>Contact me</h3>
                 <p>Email: <a href="mailto:udaykiran2k@gmail.com">udaykiran2k@gmail.com</a></p>
             </div>
-            <div class="site-map">
+            <div>
                 <h3>Site Map</h3>
                 <a href="#home">Home</a>
                 <a href="#about">About Me</a>
-                <a href="resume.pdf" download>Resume</a>
-                <a href="#footer">Contact Me</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact Me</a>
             </div>
         </div>
         <p>&copy; 2024 Uday Kiran Khareedu - All Rights Reserved.</p>
     </footer>
 
-    <!-- Smooth Scrolling JavaScript -->
+    <!-- Particles.js Configuration -->
     <script>
-        // Smooth Scroll Functionality
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value": 80,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#ffffff"
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 5,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
+    },
+    "retina_detect": true
+});
+
     </script>
 </body>
 </html>
