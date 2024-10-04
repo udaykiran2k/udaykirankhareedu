@@ -21,10 +21,11 @@ a:hover {
 /* Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Ensures space between title and nav links */
+    justify-content: space-between;
     padding: 20px;
     background-color: transparent;
     position: relative;
+    z-index: 2; /* Ensure the navbar stays above other content */
 }
 
 .navbar h1 {
@@ -36,6 +37,7 @@ a:hover {
     display: flex;
     gap: 20px;
     align-items: center;
+    z-index: 2; /* Ensure the navbar links stay above other content */
 }
 
 .navbar-right a {
@@ -56,6 +58,7 @@ a:hover {
     background: none;
     border: none;
     color: #fff;
+    z-index: 3; /* Ensure the hamburger button stays above other content */
 }
 
 /* Responsive navigation menu for small screens */
@@ -63,12 +66,14 @@ a:hover {
     .navbar-right {
         display: none; /* Hide navigation links by default */
         flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.7);
-        position: absolute;
-        top: 60px;
+        background-color: rgba(0, 0, 0, 0.9); /* Solid black background with a bit of opacity */
+        position: fixed; /* Use fixed position to stay in place and cover the screen */
+        top: 0; /* Start from the top */
         right: 0;
-        width: 100%;
-        padding: 10px;
+        width: 100%; /* Full width */
+        height: 100vh; /* Full height to cover the entire viewport */
+        padding: 20px;
+        z-index: 4; /* Ensure the menu stays above all other content */
     }
 
     .navbar-right.responsive {
@@ -80,15 +85,12 @@ a:hover {
     }
 }
 
-/* Show the full navbar on larger screens */
-@media (min-width: 769px) {
-    .navbar-right {
-        display: flex; /* Display navigation links normally */
-    }
-    .hamburger {
-        display: none; /* Hide the hamburger menu */
-    }
+/* Ensure the navbar stays above the hero section and profile picture */
+.hero {
+    position: relative;
+    z-index: 1; /* Keep the hero section below the navbar */
 }
+
 
 
 
