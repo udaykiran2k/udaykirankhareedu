@@ -27,13 +27,57 @@ a:hover {
 
 .navbar h1 {
     margin: 0;
-    font-size: 1.5em; /* Adjust to your liking */
+    font-size: 1.5em;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 .navbar-right a {
-    margin-left: 20px;
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.navbar-right a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger menu button */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 1.5em;
+    cursor: pointer;
+    background: none;
+    border: none;
     color: #fff;
 }
+
+/* Responsive navigation menu for small screens */
+@media (max-width: 768px) {
+    .navbar-right {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.7); /* Optional background for mobile */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navbar-right.responsive {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger button on mobile */
+    }
+}
+
 
 /* Hero Section with Particles.js Background */
 #particles-js {
