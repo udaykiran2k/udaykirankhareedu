@@ -30,7 +30,7 @@ a:hover {
 
 .navbar h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .navbar-right {
@@ -42,7 +42,7 @@ a:hover {
 
 .navbar-right a {
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-decoration: none;
 }
 
@@ -67,7 +67,7 @@ a:hover {
     .navbar-right {
         display: none;
         flex-direction: column;
-        background-color: #f4f4f4;
+        background-color: #000000;
         position: absolute;
         top: 60px;
         right: 0;

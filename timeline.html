@@ -60,27 +60,37 @@
     }
 
     /* Hide menu on small screens and show hamburger icon */
-    @media screen and (max-width: 768px) {
-        .navbar-right {
-            display: none;
-            flex-direction: column;
-            background-color: #000000;
-            position: absolute;
-            top: 60px;
-            right: 0;
-            width: 100%;
-            padding: 10px;
-            border-top: 2px solid #ddd;
-        }
-
-        .navbar-right.responsive {
-            display: flex;
-        }
-
-        .hamburger {
-            display: block;
-        }
+    /* Hamburger menu for small screens */
+@media screen and (max-width: 768px) {
+    .navbar-right {
+        display: none;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px; /* Adjusted top value based on the navbar height */
+        right: 0;
+        width: 100%;
+        padding: 10px;
+        z-index: 10; /* Ensure menu stays on top of other elements */
+        border-top: 2px solid #ddd;
     }
+
+    .navbar-right.responsive {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 11; /* Ensure the hamburger icon stays on top */
+    }
+
+    /* Make sure the navbar itself has a higher z-index */
+    .navbar {
+        z-index: 10;
+        position: relative;
+    }
+}
+
 
       /* Center Timeline Heading */
       h3 {
@@ -149,10 +159,11 @@
             <a href="index.html#home">Home</a>
             <a href="index.html#about">About Me</a>
             <a href="index.html#resume">Resume</a>
-            <a href="timeline.html#timeline">Experience</a>
+            <a href="#timeline">Experience</a> <!-- Internal link with smooth scrolling -->
             <a href="index.html#contact">Contact Me</a>
         </div>
     </nav>
+
     
 
     <!-- Timeline Section with ID for Scrolling -->
@@ -233,20 +244,29 @@
         </div>
     </footer>
 
-    <!-- Smooth Scroll Script -->
     <script>
-        document.querySelectorAll('.navbar-right a[href^="#"]').forEach(anchor => {
+        // Smooth scrolling for internal links
+        document.querySelectorAll('.navbar-right a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                const target = this.getAttribute('href');
+                
+                // Check if the link is an internal link (i.e., part of this page)
+                if (target.startsWith("#")) {
+                    e.preventDefault(); // Prevent default link behavior
+                    document.querySelector(target).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                
+                // Ensure the menu closes when any link is clicked on small screens
+                if (window.innerWidth <= 768) {
+                    toggleMenu();
+                }
             });
         });
-    </script>
-
-    <script>
+    
+        // Toggle the menu on mobile devices
         function toggleMenu() {
             var navbarRight = document.querySelector('.navbar-right');
             if (navbarRight.classList.contains('responsive')) {
@@ -256,6 +276,7 @@
             }
         }
     </script>
+    
 
 </body>
 </html>
