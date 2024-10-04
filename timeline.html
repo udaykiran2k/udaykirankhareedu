@@ -18,31 +18,69 @@
         scroll-behavior: smooth; /* Smooth scrolling */
       }
 
-      /* Navigation Bar */
-      .navbar {
+        /* Navigation Bar */
+    .navbar {
         display: flex;
         justify-content: space-between;
         padding: 20px;
-        background-color: #f4f4f4; /* Separate background color */
-        border-bottom: 2px solid #ddd; /* Optional border for separation */
-      }
+        background-color: #f4f4f4; /* Add background color */
+        border-bottom: 2px solid #ddd; /* Optional bottom border for separation */
+    }
 
-      .navbar h1 {
+    .navbar h1 {
         margin: 0;
         font-size: 1.5em;
         color: #000;
-      }
+    }
 
-      .navbar-right a {
-        margin-left: 20px;
+    .navbar-right {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .navbar-right a {
         color: #000;
         font-size: 1.2em;
         text-decoration: none;
-      }
+    }
 
-      .navbar-right a:hover {
+    .navbar-right a:hover {
         text-decoration: underline;
-      }
+    }
+
+    /* Hamburger menu for small screens */
+    .hamburger {
+        display: none;
+        font-size: 1.5em;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #000;
+    }
+
+    /* Hide menu on small screens and show hamburger icon */
+    @media screen and (max-width: 768px) {
+        .navbar-right {
+            display: none;
+            flex-direction: column;
+            background-color: #f4f4f4;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 100%;
+            padding: 10px;
+            border-top: 2px solid #ddd;
+        }
+
+        .navbar-right.responsive {
+            display: flex;
+        }
+
+        .hamburger {
+            display: block;
+        }
+    }
 
       /* Center Timeline Heading */
       h3 {
@@ -106,15 +144,16 @@
     <!-- Navigation Bar in the timeline page -->
     <nav class="navbar">
         <h1><a href="index.html#home">Uday Kiran Khareedu</a></h1>
+        <button class="hamburger" onclick="toggleMenu()">☰</button> <!-- Add the hamburger button -->
         <div class="navbar-right">
-            <a href="index.html#home">Home</a>  <!-- Home button added here -->
+            <a href="index.html#home">Home</a>
             <a href="index.html#about">About Me</a>
             <a href="index.html#resume">Resume</a>
-            <a href="timeline.html#timeline">Experience</a> <!-- Current page -->
+            <a href="timeline.html#timeline">Experience</a>
             <a href="index.html#contact">Contact Me</a>
-            
         </div>
     </nav>
+    
 
     <!-- Timeline Section with ID for Scrolling -->
     <main id="timeline">
@@ -206,5 +245,17 @@
             });
         });
     </script>
+
+    <script>
+        function toggleMenu() {
+            var navbarRight = document.querySelector('.navbar-right');
+            if (navbarRight.classList.contains('responsive')) {
+                navbarRight.classList.remove('responsive');
+            } else {
+                navbarRight.classList.add('responsive');
+            }
+        }
+    </script>
+
 </body>
 </html>

@@ -42,7 +42,7 @@ a:hover {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1; /* Ensures particles stay in the background */
+    z-index: -1;
 }
 
 .hero {
@@ -50,55 +50,50 @@ a:hover {
     padding: 100px 20px;
     background-color: transparent;
     position: relative;
-    z-index: 1; /* Ensures the content stays on top of particles */
-    height: 82vh; /* Ensure it fills the viewport */
+    z-index: 1;
+    height: 82vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Make the text bigger in the hero section */
 .hero h2 {
-    font-size: 4em; /* Increased font size for name */
+    font-size: 4em;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 2em; /* Adjust subtitle font size */
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
-/* Circular image in Hero section */
 .profile-pic {
-    width: 140px; /* Reduced image size */
+    width: 140px;
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center;
-    margin-bottom: 10px; /* Adjusts spacing below the image */
+    margin-bottom: 10px;
 }
 
 /* Social icons styling */
 .social-icons img {
-    width: 40px; /* Icon size */
-    height: 40px; /* Make the height equal to the width for a perfect circle */
+    width: 40px;
+    height: 40px;
     margin: 0 10px;
     margin-top: 20px;
     background-color: #f4f4f4;
-    border-radius: 100%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the icon scales properly within the circular frame */
-    padding: 2px; /* Optional: Adds some padding inside the circle for a clean look */
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 2px;
 }
-
 
 /* About Me Section */
 .about-section {
     text-align: center;
-    height: 45vh;
     padding: 50px 20px;
-    background-color: #f4f4f4; /* White background */
+    background-color: #f4f4f4;
 }
 
 .section-title {
@@ -152,14 +147,14 @@ a:hover {
 /* My Top Projects Section */
 .top-projects {
     padding: 60px 20px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Darkened background for contrast */
     text-align: center;
 }
 
 .top-projects h3 {
     font-size: 2.5em;
     margin-bottom: 30px;
-    color: #000000;
+    color: #fff;
 }
 
 /* Project Cards */
@@ -213,19 +208,6 @@ a:hover {
     background-color: #dc3545;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .project-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-card {
-        width: 90%;
-    }
-}
-
-
 /* Contact Me Section */
 .contact-section {
     padding: 50px 20px;
@@ -233,52 +215,95 @@ a:hover {
     text-align: center;
 }
 
-.contact-section h3{
+.contact-section h3 {
     color: #ffffff;
 }
+
 /* Footer */
 footer {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     text-align: center;
-    color: #000000;
+    color: #000;
 }
 
-
-/* Responsive Design for Mobile Screens */
-@media only screen and (max-width: 768px) {
-    /* Stack the navigation links vertically */
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navbar */
     .navbar {
         flex-direction: column;
         text-align: center;
     }
 
-    /* Make the profile image smaller for mobile */
+    /* Hero Section */
+    .hero {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.5em;
+    }
+
+    /* Profile Pic */
     .profile-pic {
-        width: 100px; /* Smaller profile pic for mobile */
+        width: 100px;
         height: 100px;
     }
 
-    /* Make the About section stack vertically */
+    /* About Section */
     .about-section {
-        flex-direction: column;
-        padding: 50px 20px;
+        padding: 40px 20px;
     }
 
-    /* Adjust About Me image size for mobile */
-    .about-pic {
-        max-width: 200px;
+    .section-title {
+        font-size: 2em;
+    }
+
+    .section-description {
+        font-size: 1em;
+    }
+
+    /* Hexagonal Grid */
+    .hex {
+        width: 90px;
+        height: 103.92px;
+    }
+
+    /* My Top Projects Section */
+    .top-projects {
+        padding: 40px 20px;
+    }
+
+    .top-projects h3 {
+        font-size: 2em;
+    }
+
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
         margin-bottom: 20px;
     }
 
-    /* Ensure text is centered on smaller screens */
-    .about-text {
-        padding-left: 0;
-        text-align: center;
+    .project-card img {
+        width: 40%;
+        height: auto;
+        margin-bottom: 10px;
     }
 
-    /* Footer responsive layout */
-    .footer-content {
-        flex-direction: column;
+    .project-card h4 {
+        font-size: 1.2em;
+    }
+
+    .project-card p {
+        font-size: 0.9em;
     }
 }
