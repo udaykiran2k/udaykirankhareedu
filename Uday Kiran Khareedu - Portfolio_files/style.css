@@ -89,7 +89,7 @@ a:hover {
     background-color: #f4f4f4;
     border-radius: 100%; /* Makes the image circular */
     object-fit: cover; /* Ensures the icon scales properly within the circular frame */
-    padding: 2px; /* Optional: Adds some padding inside the circle for a clean look */
+    padding: 5px; /* Optional: Adds some padding inside the circle for a clean look */
 }
 
 

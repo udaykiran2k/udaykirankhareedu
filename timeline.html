@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Timeline Section</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Nunito&amp;display=swap" rel="stylesheet" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://diogotc.com/common.css?h=5973d4556e23e9912129" />
+    <link rel="stylesheet" href="https://diogotc.com/homepage.css?h=dc82ff90c7b5ee57a76a" />
+    <style>
+      body {
+        background-color: #fff;
+        color: #000;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth; /* Smooth scrolling */
+      }
+
+      /* Navigation Bar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #f4f4f4; /* Separate background color */
+        border-bottom: 2px solid #ddd; /* Optional border for separation */
+      }
+
+      .navbar h1 {
+        margin: 0;
+        font-size: 1.5em;
+        color: #000;
+      }
+
+      .navbar-right a {
+        margin-left: 20px;
+        color: #000;
+        font-size: 1.2em;
+        text-decoration: none;
+      }
+
+      .navbar-right a:hover {
+        text-decoration: underline;
+      }
+
+      /* Center Timeline Heading */
+      h3 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: #333;
+      }
+
+      .timeline-element {
+        background-color: transparent;
+        border: none;
+        padding: 20px;
+        margin-bottom: 20px;
+        color: #000;
+        position: relative;
+      }
+
+      /* Hover effect for timeline cards */
+      .timeline-element-content {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Normal shadow */
+      }
+
+      .timeline-element-content:hover {
+        transform: translateY(-10px); /* Lift up slightly */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+        z-index: 2; /* Ensure the hover effect overlaps other content */
+      }
+
+      h4 {
+        font-weight: 500;
+        color: #333;
+      }
+
+      h5, p, .timeline-element-date {
+        font-weight: 400;
+        color: #555;
+      }
+
+      /* Footer Styling */
+      footer {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+      }
+
+      footer p {
+        color: #333;
+        font-size: 1em;
+      }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar in the timeline page -->
+    <nav class="navbar">
+        <h1><a href="index.html#home">Uday Kiran Khareedu</a></h1>
+        <div class="navbar-right">
+            <a href="index.html#home">Home</a>  <!-- Home button added here -->
+            <a href="index.html#about">About Me</a>
+            <a href="index.html#resume">Resume</a>
+            <a href="timeline.html#timeline">Experience</a> <!-- Current page -->
+            <a href="index.html#contact">Contact Me</a>
+            
+        </div>
+    </nav>
+
+    <!-- Timeline Section with ID for Scrolling -->
+    <main id="timeline">
+      <h3>Timeline</h3>
+      <div class="timeline">
+
+        <div class="timeline-element">
+          <span class="timeline-element-icon" style="background-color: #009de0; color: #fff;">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path class="graphic" d="..." fill="#fff" fill-rule="evenodd"/></svg>
+          </span>
+          <div class="timeline-element-content">
+            <h4>Azure FullStack Developer</h4>
+            <h5> Marathon Petroleum Corporation</h5>
+            <p>Part of a great team. Working on Enterprise Document Data Extraction & API Management.</p>
+            <span class="timeline-element-date">Mar 2024 - Present</span>
+          </div>
+        </div>
+
+        <div class="timeline-element">
+          <span class="timeline-element-icon" style="background-color: #004791; color: #fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 502"><path d="..." fill="#fff"/></svg>
+          </span>
+          <div class="timeline-element-content">
+            <h4>Sr. Azure Data Engineer</h4>
+            <h5>3M</h5>
+            <p>Supply Chain project with extensive work on building pipelines and using ADF & Databricks.</p>
+            <span class="timeline-element-date">May 2022 - Feb 2024 (1 yr 10 mos)</span>
+          </div>
+        </div>
+
+        <!-- Added Timeline Event 3 -->
+        <div class="timeline-element">
+          <span class="timeline-element-icon" style="background-color: #8e44ad; color: #fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 502"><path d="..." fill="#fff"/></svg>
+          </span>
+          <div class="timeline-element-content">
+            <h4>Azure Data Engineer</h4>
+            <h5>Aha Apps</h5>
+            <p>Worked on multiple projects with extensive tool sets available in Azure Cloud.</p>
+            <span class="timeline-element-date">Mar 2018 - Apr 2022 (4 yrs 2 mos)</span>
+          </div>
+        </div>
+
+        <!-- Added Timeline Event 4 -->
+        <div class="timeline-element">
+          <span class="timeline-element-icon" style="background-color: #27ae60; color: #fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 502"><path d="..." fill="#fff"/></svg>
+          </span>
+          <div class="timeline-element-content">
+            <h4>Big Data Engineer</h4>
+            <h5>Calvin Technologies</h5>
+            <p>Started working on big data concepts like Hadoop, Map Reduce..</p>
+            <span class="timeline-element-date">Nov 2014 - May 2017 (2 yrs 7 mos)</span>
+          </div>
+        </div>
+
+        <!-- Added Timeline Event 5 -->
+        <div class="timeline-element">
+            <span class="timeline-element-icon" style="background-color: #ae2734; color: #fff;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 502"><path d="..." fill="#fff"/></svg>
+            </span>
+            <div class="timeline-element-content">
+              <h4>ETL Developer</h4>
+              <h5>Landmark IT Solutions Pvt. Ltd</h5>
+              <p>Responsible for designing, building, managing and maintaining ETL processes.</p>
+              <span class="timeline-element-date">Jul 2012 - Oct 2014 (2 yrs 4 mos)</span>
+            </div>
+          </div>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Uday Kiran Khareedu - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('.navbar-right a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
