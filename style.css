@@ -1,6 +1,6 @@
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     color: #fff;
@@ -23,14 +23,16 @@ a:hover {
     justify-content: space-between;
     padding: 20px;
     background-color: transparent;
+    color: #fff;
 }
 
 .navbar h1 {
     margin: 0;
-    font-size: 1.5em; /* Adjust to your liking */
+    font-size: 2em;
 }
 
 .navbar-right a {
+    font-size: 1.2em;
     margin-left: 20px;
     color: #fff;
 }
@@ -42,7 +44,7 @@ a:hover {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1; /* Ensures particles stay in the background */
+    z-index: -1;
 }
 
 .hero {
@@ -50,39 +52,38 @@ a:hover {
     padding: 100px 20px;
     background-color: transparent;
     position: relative;
-    z-index: 1; /* Ensures the content stays on top of particles */
-    height: 75vh; /* Ensure it fills the viewport */
+    z-index: 1;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Make the text bigger in the hero section */
 .hero h2 {
-    font-size: 4em; /* Increased font size for name */
+    font-size: 3em;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .hero p {
-    font-size: 2em; /* Adjust subtitle font size */
+    font-size: 1.5em;
     margin-bottom: 10px;
+    color: #ddd;
 }
 
-/* Circular image in Hero section */
 .profile-pic {
-    width: 140px; /* Reduced image size */
+    width: 140px;
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
-    margin-bottom: 10px; /* Adjusts spacing below the image */
+    margin-bottom: 20px;
 }
 
-/* Social icons styling */
 .social-icons img {
-    width: 40px; /* Reset to previous size */
+    width: 40px;
     margin: 0 10px;
     margin-top: 20px;
 }
@@ -91,10 +92,11 @@ a:hover {
 .about-section {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f4f4f4; /* White background */
+    background-color: #fff;
+    color: #000;
 }
 
-.section-title {
+.about-section h3 {
     font-size: 2.5em;
     color: #333;
     margin-bottom: 20px;
@@ -142,10 +144,10 @@ a:hover {
     transition: all 0.3s ease;
 }
 
-/* Portfolio Header */
+/* Portfolio Header Section */
 .portfolio-header {
     padding: 50px 0;
-    background: rgba(0, 0, 0, 0.5); /* Transparent background */
+    background: rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 
@@ -154,67 +156,88 @@ a:hover {
     color: #fff;
 }
 
-/* My Top Projects Section */
+/* Reset any conflicting styles */
+body, h3, p, div, section {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Top Projects Section */
 .top-projects {
     padding: 60px 20px;
     background-color: #f4f4f4;
-    text-align: center;
+    text-align: center; /* Ensure the section and content are centered */
 }
 
-.top-projects h3 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+/* Ensure the title is properly centered */
+.top-projects .section-title {
+    font-size: 3em; /* Larger, bold title */
+    font-weight: bold;
+    margin: 0 auto 30px auto; /* Center the title with margin */
     color: #333;
+    display: inline-block; /* Prevents it from spanning the full width */
 }
 
-/* Project Cards */
+/* Project Grid */
 .project-grid {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px; /* Increased gap for better spacing */
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the project grid */
 }
 
+/* Project Cards */
 .project-card {
-    width: 300px;
+    width: 350px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Larger shadow for depth */
+    background-color: #fff;
+    color: #333;
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 .project-card img {
-    width: 50%;
-    height: 70px;
-    object-fit: cover;
-    margin-bottom: 15px;
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 20px;
 }
 
 .project-card h4 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-bottom: 10px;
+    color: #333;
 }
 
 .project-card p {
-    font-size: 1em;
+    font-size: 1.1em;
     margin-bottom: 20px;
+    color: #666;
 }
 
 /* Visit Link Button */
 .visit-link {
     color: #fff;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #007bff;
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    display: inline-block;
 }
 
 .visit-link:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: #0056b3;
 }
 
 /* Specific Color for Each Project Card */
@@ -234,199 +257,51 @@ a:hover {
     }
 
     .project-card {
-        width: 90%;
+        width: 90%; /* Full-width cards on mobile */
+        margin-bottom: 20px;
     }
 }
+
+
 
 /* Timeline Section */
 .timeline-section {
-    background-color: #f4f4f4;
-    padding: 60px 0;
+    background-color: #fff;
+    color: #000;
+    padding: 60px 20px;
     text-align: center;
-    position: relative;
 }
 
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: black;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.timeline-item {
-    position: relative;
-    width: 50%;
-    padding: 20px 40px;
-    box-sizing: border-box;
-}
-
-.timeline-item.left {
-    left: 0;
-}
-
-.timeline-item.right {
-    left: 50%;
-}
-
-.timeline-date {
-    position: absolute;
-    top: 20px;
-    font-size: 1em;
-    color: #555;
-    background-color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-item.left .timeline-date {
-    right: calc(100% + 20px);
-}
-
-.timeline-item.right .timeline-date {
-    left: calc(100% + 20px);
-}
-
-.timeline-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.timeline-content h4 {
-    margin-bottom: 10px;
-    font-size: 1.25em;
+.timeline-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
     color: #333;
 }
 
-.timeline-content p {
-    font-size: 1em;
-    color: #666;
-}
-
-/* Timeline content with improved hover effect */
-.timeline-item:hover .timeline-icon img {
-    transform: scale(1.15);  /* Increase icon size more noticeably */
-    transition: transform 0.3s ease-in-out;
-}
-
-.timeline-content {
-    padding-top: 50px;  /* Increased padding to ensure space for the icon */
-    padding: 30px;  /* Increased padding for overall space */
-    background-color: white;
+.timeline-element {
+    background-color: transparent;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #333;
     position: relative;
-    border-radius: 8px;  /* Slightly more rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Slightly stronger shadow by default */
-    transition: box-shadow 0.3s ease;
-    font-size: 1.1em;  /* Increased font size for better readability */
 }
 
-.timeline-item:hover .timeline-content {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);  /* Stronger shadow on hover */
-    transform: translateY(-5px);  /* Slightly raise the card on hover */
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.timeline-icon {
-    position: absolute;
-    width: 50px;  /* Increased icon size */
-    height: 50px;
-    background-color: white;
-    border-radius: 50%;
-    border: 4px solid #000;
-    left: 50%;
-    top: -30px;  /* Moved further above the card */
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
-.timeline-icon img {
-    width: 40px;  /* Increased icon image size */
-    height: 40px;
-    border-radius: 50%;
-}
-
-.timeline-content h4 {
-    font-size: 1.7em;  /* Increased title size */
-    margin-top: 30px;  /* Increased margin between the icon and title */
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-/* Responsive adjustments for hover effect */
-@media (max-width: 768px) {
-    .timeline-content {
-        font-size: 1em;  /* Adjust font size for smaller screens */
-    }
-
-    .timeline-item:hover .timeline-content {
-        transform: none;  /* Remove hover movement for smaller screens */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* Slightly reduce shadow on small screens */
-    }
-}
-
-
-
-/* Timeline Icon */
-.timeline-icon {
-    position: absolute;
-    top: 20px;
-    left: calc(50% - 20px);
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border: 3px solid black;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.timeline-icon img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .timeline-item {
-        width: 100%;
-        left: 0;
-    }
-
-    .timeline-item.right {
-        left: 0;
-    }
-
-    .timeline-date {
-        top: -40px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .timeline-icon {
-        left: calc(50% - 20px);
-    }
-}
-
-
-
-/* Contact Me Section */
+/* Contact Section */
 .contact-section {
     padding: 50px 20px;
     background: transparent;
     text-align: center;
+    color: #fff;
+}
+
+.contact-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-section p a {
+    color: #00acee;
 }
 
 /* Footer */
@@ -434,44 +309,51 @@ footer {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     text-align: center;
-    color: #fff;
+    color: #000;
 }
 
-
 /* Responsive Design for Mobile Screens */
-@media only screen and (max-width: 768px) {
-    /* Stack the navigation links vertically */
+@media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         text-align: center;
     }
 
-    /* Make the profile image smaller for mobile */
     .profile-pic {
-        width: 100px; /* Smaller profile pic for mobile */
+        width: 100px;
         height: 100px;
     }
 
-    /* Make the About section stack vertically */
-    .about-section {
-        flex-direction: column;
-        padding: 50px 20px;
+    .about-section, .top-projects, .portfolio-header, .contact-section {
+        padding: 30px 20px;
     }
 
-    /* Adjust About Me image size for mobile */
-    .about-pic {
-        max-width: 200px;
-        margin-bottom: 20px;
+    .project-card {
+        width: 90%;
     }
 
-    /* Ensure text is centered on smaller screens */
-    .about-text {
-        padding-left: 0;
-        text-align: center;
+    .hex {
+        width: 100px;
+        height: 115.47px;
     }
 
-    /* Footer responsive layout */
-    .footer-content {
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .timeline-element {
+        padding: 15px;
+    }
+
+    .timeline-section h3, .contact-section h3 {
+        font-size: 2em;
+    }
+
+    .project-grid {
         flex-direction: column;
     }
 }
