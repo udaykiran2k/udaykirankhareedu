@@ -62,26 +62,26 @@ a:hover {
 }
 
 /* Responsive navigation menu for small screens */
-@media (max-width: 768px) {
+/* Hide menu on small screens and show hamburger icon */
+@media screen and (max-width: 768px) {
     .navbar-right {
-        display: none; /* Hide navigation links by default */
+        display: none;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9); /* Solid black background with a bit of opacity */
-        position: fixed; /* Use fixed position to stay in place and cover the screen */
-        top: 0; /* Start from the top */
+        background-color: #f4f4f4;
+        position: absolute;
+        top: 60px;
         right: 0;
-        width: 100%; /* Full width */
-        height: 100vh; /* Full height to cover the entire viewport */
-        padding: 20px;
-        z-index: 4; /* Ensure the menu stays above all other content */
+        width: 100%;
+        padding: 10px;
+        border-top: 2px solid #ddd;
     }
 
     .navbar-right.responsive {
-        display: flex; /* Show navigation links when menu is toggled */
+        display: flex;
     }
 
     .hamburger {
-        display: block; /* Show hamburger button on mobile */
+        display: block;
     }
 }
 
