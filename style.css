@@ -17,34 +17,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Navigation Bar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: transparent;
-}
-
-.navbar h1 {
-    margin: 0;
-    font-size: 1.5em;
-}
-
-.navbar-right {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.navbar-right a {
-    color: #fff;
-    font-size: 1.2em;
-    text-decoration: none;
-}
-
-.navbar-right a:hover {
-    text-decoration: underline;
-}
 
 /* Navigation Bar */
 .navbar {
@@ -91,7 +63,7 @@ a:hover {
     .navbar-right {
         display: none; /* Hide navigation links by default */
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(255, 255, 255, 0.7);
         position: absolute;
         top: 60px;
         right: 0;
